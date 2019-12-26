@@ -1,0 +1,107 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+  <title>Hey Series</title>
+  <link rel="icon" type="image/png" sizes="96x96" href="../static/img/favicon-96x96.png">
+  <link href="https://fonts.googleapis.com/css?family=Neuton:800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="/static/js/jquery.js"></script>
+  <script src="/static/js/index.js"></script>
+</head>
+
+<body>
+  <header class="menu-principal">
+
+    <div class="redes-sociais">
+      <a href="https://gitlab.com/Jeferson.Constantino/projeto-webbot" target="_blank">
+        <img src="../static/img/Git-Logo-White.png" />
+      </a>
+      <div class="dropdown">
+        <p>ABOUT</p>
+        <div class="dropdown-content">
+          <p> Trabalho realizado pelos alunos da FATEC/SJC do 1º Semestre/2019.
+            Consiste na criação de um webbot, coletando dados de diversas plataformas
+            cinematográficas e otimizar a experiência do usuário em indicação de séries.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </header>
+
+  <div class="logo">
+    <img src="../static/img/logo.png">
+  </div>
+
+
+  <div class="search">
+    <input placeholder="Search Something" type="search" id="text" list="historico" />
+    <i id="btnSearch" class="material-icons">
+      search
+    </i>
+    <datalist id="historico">
+
+    </datalist>
+  </div>
+
+  <div class="options">
+    <div class="field">
+      <input type="radio" id="rdbGenre" name="search" value="genre">Genre</input>&nbsp;
+    </div>
+
+    <div class="field">
+      <input type="radio" id="rdbTitle" name="search" value="title">Title</input>&nbsp;
+    </div>
+
+    <div class="field">
+      <input type="radio" id="rdbYear" name="search" value="year">Year</input>
+    </div>
+  </div>
+
+
+  </div>
+
+  <div class="results-space">
+
+    <div class="results">
+      <table id="tableSeries">
+        <thead>
+          <tr>
+            <th>
+              Title
+            </th>
+            <th>
+              Note
+            </th>
+            <th>
+              Genre
+            </th>
+            <th>
+              Year
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for serie in data %}
+          <tr>
+            <td>{{serie.title}}</td>
+            <td>{{serie.notes}}</td>
+            <td>{{serie.genre}}</td>
+            <td>{{serie.year}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+</body>
+
+
+
+</html>
