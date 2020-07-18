@@ -1,6 +1,5 @@
 # Projeto Integrador - HeySeries
 
-# Hey Series 
 Trabalho realizado pelos alunos da FATEC/SJC do 1º Semestre/2019. Consiste na criação de um webbot, coletando dados de diversas plataformas cinematográficas e otimizar a experiência do usuário em indicação de séries,podendo haver pesquisa dentre as series mais populares, os meios de pesquisa são: nome; data de lançamento; e gênero.
 
 ## Construção
